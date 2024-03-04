@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="container-fluid">
+	<div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <div class="row">
+            <div class="col-lg-6" style="margin-top:50px;">
+            <h3 style="text-align: left; color: purple;font-size: 50px;"> SEO BLOG</h3>
+            <p style="text-align:justify;font-size:20px;">Our SEO experts share the insights that make your rankings go through the roof!</p>
+            <br/>
+            <p style="text-align:justify;font-size: 20px;">Here, you’ll find everything you need to know about SEO. Whether you’re looking for tips and tricks for beginners, the most complete SEO guides, or a deep-dive into technical SEO.</p>
+        </div>
+        <div class="col-lg-6">
+            <img src="{%static 'images/girl_laptop.png'%}" style="height: 350px;margin-left: 200px;">
+
+    </div>
+</div>
+</div>
+        <div class="col-lg-2"></div>
+    </div>
+    <br/>
+    <br/> 
+    <div class="row">
+	{% for i in data %}
+
+	<div class="col-lg-4" style="padding-left:100px;">
+
+  <div class="card" style="width: 20rem;height: 30rem;border-color:grey;border-width:3px;box-shadow: 10px 10px lightgrey;border-radius: 10px;">
+  <img src="{{i.image.url}}" class="card-img-top" alt="..." style="height:50%;">
+  <div class="card-body">
+  <h5 class="card-title" style="color:purple;">{{i.title}} </h5>
+   <p style="color:purple "> {{i.date}}</p>
+    <p class="card-text" >{{i.description|truncatechars:100}}</p>
+    <a href="{% url 'detailblog'  id=i.id %}" class="btn" style="background-color: #2a90dc;color: white;">view more</a>
+
+  </div>
+</div>
+</div>
+
+    {% endfor %}
+      
+	</div>
+</div>
+<br/>
+{% endblock %}

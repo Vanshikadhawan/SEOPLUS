@@ -1,0 +1,198 @@
+
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css'%}">
+    <link rel="stylesheet"  href="{%static 'css/aos.css'%}">
+    <link rel="stylesheet"  href="{%static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    
+    <style type="text/css">
+      *{
+        margin: 0px;
+        padding: 0px;
+      }
+
+  .required{
+    color: red;
+
+  }
+
+  .login{
+    text-decoration: none;
+    color: black;
+  }
+
+  .logo{
+    padding-right: 300px;
+    padding-left: 10px;
+    padding-top: 50px;
+    color:black;
+  }
+
+  .img1{height: 100%; width: 100%;border-bottom-left-radius: 20%;margin: 20px; border:5px solid blueviolet;box-shadow: 0px 0px 10px blueviolet;}
+
+  .seo{height:80px; width:150px;margin: 20px;margin-left:80px;}
+   		
+  		.a1{color:white; text-decoration: none;font-size: 5px;}
+  		.a1:hover{color:mediumpurple;}
+
+  .searchEngine{height: 50%;width: 30%;}
+
+  .button {
+  position: relative;
+  background-color: #2a90dc;
+  border: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+
+ 
+</style>
+</head>
+<body>
+  
+      
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="background: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703815200&semt=sph'); background-size: cover; padding:2px;">
+  <div class="col-lg-4">
+  <a class="navbar-brand" href="#"><img class="seo" src="{%static 'images/seo.png'%}"></a>
+  <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>--> 
+</div>
+<div class="col-lg-5 bg-light p-1" style="border-radius: 50px;">
+  
+    
+    
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-disabled="true" style="color:black;font-size: 20px; padding:10px;margin-right: 10px; margin-left:30px;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-disabled="true" style="color:black;font-size: 20px; padding:10px;margin-right: 10px; margin-left:30px;">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active" aria-disabled="true" href="{% url 'faq'%}" style="color:black;font-size: 20px; padding:10px;margin-right: 10px; margin-left:30px;">FAQ</a>
+          
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link active" aria-disabled="true" href=" {% url 'blogs'%}" style="color:black;font-size: 20px; padding:10px;margin-right: 10px; margin-left:30px;">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-disabled="true" href=" {% url 'contact'%}" style="color:black;font-size: 20px; padding:10px;margin-right: 5px; margin-left:30px;">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+    <div class="col-lg-4">
+      <i class="bi bi-search " style="padding-right: 10px; padding-left:200px; color: balck;font-size: 2rem;"></i>
+      <a class="login" href=" {% url 'login'%}"><i class="bi bi-person-circle" style="padding-left: 60px;padding-right: 5PX; color: balck;font-size: 2rem;"></i></a>
+      <!--<form class="d-flex m-5 " role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>-->
+    </div>
+    
+  
+  
+</nav>
+<!--<div class="progress-bar-class">
+  <div class="progress-navbar-css"></div>
+  <div class="progress-navbar-js"></div>
+</div>
+-->
+
+
+	
+{% block content %}
+
+
+{% endblock %}
+
+<div class="row" >
+<br/>
+<br/>
+<br/>
+<br/>
+		</div>
+		
+			
+			<div class="row" style="background-color:black;padding-right: 200px;">
+        <div class="row" style="margin-left: 100px;border-top: 2px solid white;margin-top: 50px;">
+          <div class="col-lg-2">
+
+          <p style="color:white;border:3px solid grey;margin-top:50px;border-radius: 10px;text-align: center;font-size: 20px; color:white; padding: 10px; "> <i class="bi bi-envelope" style="padding-right:20px;"></i>Contact Us    </p>
+        </div>
+        <div class="col-lg-6"></div>
+        <div class="col-lg-4" style="margin-top: 50px;">
+          <a href="#">
+          <button class="button" >Get started with SEOPLUS </button></a>
+        </div>
+      </div>
+      <div class="row" style="margin-left: 100px;margin-top: 50px; border-bottom: 2px solid white;">
+      
+			<div class="col-lg-2"  >
+
+			
+			 <a class="a1" href="#"> <h3>SEOPLUS</h3></a><br/>
+			 <a class="a1" href="#"> <h6>Features</h6></a><br/>
+		     <a class=" a1" href="#"> <h6>Pricing</h6></a><br/>
+	         <a class="a1" href="#"> <h6>Stats and Facts</h6></a><br/>
+	         <a class="a1" href="#"> <h6>News</h6></a><br/>
+	     
+	 
+	     </div>
+
+			<div class="col-lg-2">
+				<a class="a1" href="#"> <h6>Our Portfolio</h6></a><br/>
+			 <a class="a1" href="#"> <h6>Our Pricing</h6></a><br/>
+		     <a class=" a1" href="#"> <h6>Team Member</h6></a><br/>
+	         <a class="a1" href="#"> <h6>Testimonials</h6></a><br/>  
+	         <a class="a1" href="#"> <h6>FAQs</h6></a><br/></div>
+
+
+
+
+			<div class="col-lg-2 ">
+			<a class="a1" href="#"> <h6>Product Page</h6></a><br/>
+			 <a class="a1" href="#"> <h6>Our Pricing</h6></a><br/>
+		     <a class=" a1" href="#"> <h6>Company</h6></a><br/>
+	         <a class="a1" href="#"> <h6>Testimonials</h6></a><br/>
+	         <a class="a1" href="#"> <h6>FAQs</h6></a><br/>
+           
+         </div>
+         
+
+
+		</div>
+    <div class="row">
+      <p style="color:white;">SEOPLUS</p>
+    </div>
+  </div>
+
+	
+
+
+<!-- Option 1: Bootstrap Bundle with Popper(JS linking) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{%static 'js/aos.js'%}"></script>
+    <script type="text/javascript">
+      AOS.init();
+    </script>
+</body>
+</html>
